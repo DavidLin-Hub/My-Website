@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <title>Alpaca Guide - Minecraft Tutorial for Beginners</title>
+    <meta name="description" content="Complete Minecraft guide from basics to advanced - learn survival, PvP, servers, and more with the Holy Alpaca!">
+    <meta name="theme-color" content="#6366f1">
+    <meta property="og:title" content="Alpaca Guide - Minecraft Tutorial">
+    <meta property="og:description" content="Complete Minecraft guide from basics to advanced - learn survival, PvP, servers, and more with the Holy Alpaca!">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%236366f1'/%3E%3Cstop offset='1' stop-color='%2322d3ee'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='22' fill='url(%23g)'/%3E%3Ctext x='50' y='62' font-size='58' text-anchor='middle' dominant-baseline='middle'%3E%F0%9F%A6%99%3C/text%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <h1>Alpaca Guide</h1>
+            </div>
+            <p class="subtitle" data-i18n="subtitle">Your friendly Minecraft tutorial companion</p>
+            <div class="language-switcher">
+                <button class="lang-btn active" data-lang="en" title="English">🇺🇸 EN</button>
+                <button class="lang-btn" data-lang="zh-cn" title="简体中文">🇨🇳 简体</button>
+                <button class="lang-btn" data-lang="zh-tw" title="繁體中文">🇹🇼 繁體</button>
+                <button id="theme-toggle" class="theme-toggle" title="Toggle theme" aria-label="Toggle theme">🌙</button>
+            </div>
+        </div>
+        <!-- Reading progress bar -->
+        <div id="reading-progress"></div>
+    </header>
+
+    <div class="container">
+        <main class="main-content">
+            <aside class="sidebar">
+                <div class="sidebar-header">
+                    <h2 data-i18n="toc">📚 Table of Contents</h2>
+                    <div class="search-wrap">
+                        <input id="nav-search" type="text" placeholder="Search chapters..." aria-label="Search chapters">
+                    </div>
+                </div>
+                <nav class="chapter-nav" id="chapter-nav">
+                    <!-- Navigation will be populated by JavaScript based on selected language -->
+                </nav>
+            </aside>
+
+            <article class="content">
+                <div id="loading" class="loading">
+                    <div class="loading-spinner"></div>
+                    <span class="alpaca-emoji">🦙</span>
+                    <p data-i18n="loading">Loading content...</p>
+                </div>
+                <div id="article-content" class="article-content" style="display: none;">
+                    <!-- Markdown content will be loaded here -->
+                </div>
+                <div id="error" class="error" style="display: none;">
+                    <p data-i18n="error">❌ Failed to load content. Please try again.</p>
+                </div>
+            </article>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p data-i18n="footer">Creator: David Lin</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Back to top button -->
+    <button id="back-to-top" title="Back to top" aria-label="Back to top">↑</button>
+
+    <!-- Image lightbox overlay -->
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+        <div class="lightbox-backdrop"></div>
+        <img id="lightbox-img" alt="Preview">
+        <button id="lightbox-close" class="lightbox-close" aria-label="Close">✕</button>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
